@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Global Companies Database</h1>
+            <p>Fortune 500 Companies - Revenue, Industry & Employment Data</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Companies Listed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">$18.5T</div>
+                <div class="stat-label">Total Revenue</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">25M+</div>
+                <div class="stat-label">Total Employees</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Industries</div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="companies-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Company Name</th>
+                        <th>Revenue (Billions USD)</th>
+                        <th>Industry</th>
+                        <th>Employees</th>
+                        <th>Country</th>
+                        <th>Founded</th>
+                        <th>Market Cap (B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-company-id="1">
+                        <td class="rank">1</td>
+                        <td class="company-name">Walmart</td>
+                        <td class="revenue">611.3</td>
+                        <td class="industry">Retail</td>
+                        <td class="employees">2,100,000</td>
+                        <td class="country">United States</td>
+                        <td>1962</td>
+                        <td>452.8</td>
+                    </tr>
+                    <tr data-company-id="2">
+                        <td class="rank">2</td>
+                        <td class="company-name">Amazon</td>
+                        <td class="revenue">574.8</td>
+                        <td class="industry">E-commerce/Cloud</td>
+                        <td class="employees">1,541,000</td>
+                        <td class="country">United States</td>
+                        <td>1994</td>
+                        <td>1547.2</td>
+                    </tr>
+                    <tr data-company-id="3">
+                        <td class="rank">3</td>
+                        <td class="company-name">Apple</td>
+                        <td class="revenue">394.3</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">161,000</td>
+                        <td class="country">United States</td>
+                        <td>1976</td>
+                        <td>3451.2</td>
+                    </tr>
+                    <tr data-company-id="4">
+                        <td class="rank">4</td>
+                        <td class="company-name">Saudi Aramco</td>
+                        <td class="revenue">347.6</td>
+                        <td class="industry">Oil & Gas</td>
+                        <td class="employees">68,493</td>
+                        <td class="country">Saudi Arabia</td>
+                        <td>1933</td>
+                        <td>2065.4</td>
+                    </tr>
+                    <tr data-company-id="5">
+                        <td class="rank">5</td>
+                        <td class="company-name">Alphabet</td>
+                        <td class="revenue">307.4</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">190,234</td>
+                        <td class="country">United States</td>
+                        <td>1998</td>
+                        <td>2089.1</td>
+                    </tr>
+                    <tr data-company-id="6">
+                        <td class="rank">6</td>
+                        <td class="company-name">Microsoft</td>
+                        <td class="revenue">245.1</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">238,000</td>
+                        <td class="country">United States</td>
+                        <td>1975</td>
+                        <td>3124.7</td>
+                    </tr>
+                    <tr data-company-id="7">
+                        <td class="rank">7</td>
+                        <td class="company-name">Berkshire Hathaway</td>
+                        <td class="revenue">364.5</td>
+                        <td class="industry">Investment</td>
+                        <td class="employees">383,000</td>
+                        <td class="country">United States</td>
+                        <td>1839</td>
+                        <td>872.3</td>
+                    </tr>
+                    <tr data-company-id="8">
+                        <td class="rank">8</td>
+                        <td class="company-name">Tesla</td>
+                        <td class="revenue">96.8</td>
+                        <td class="industry">Automotive</td>
+                        <td class="employees">140,473</td>
+                        <td class="country">United States</td>
+                        <td>2003</td>
+                        <td>823.5</td>
+                    </tr>
+                    <tr data-company-id="9">
+                        <td class="rank">9</td>
+                        <td class="company-name">Meta</td>
+                        <td class="revenue">134.9</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">77,805</td>
+                        <td class="country">United States</td>
+                        <td>2004</td>
+                        <td>1289.4</td>
+                    </tr>
+                    <tr data-company-id="10">
+                        <td class="rank">10</td>
+                        <td class="company-name">TSMC</td>
+                        <td class="revenue">75.9</td>
+                        <td class="industry">Semiconductors</td>
+                        <td class="employees">75,872</td>
+                        <td class="country">Taiwan</td>
+                        <td>1987</td>
+                        <td>589.7</td>
+                    </tr>
+                    <tr data-company-id="11">
+                        <td class="rank">11</td>
+                        <td class="company-name">NVIDIA</td>
+                        <td class="revenue">78.4</td>
+                        <td class="industry">Semiconductors</td>
+                        <td class="employees">29,600</td>
+                        <td class="country">United States</td>
+                        <td>1993</td>
+                        <td>2834.6</td>
+                    </tr>
+                    <tr data-company-id="12">
+                        <td class="rank">12</td>
+                        <td class="company-name">Tencent</td>
+                        <td class="revenue">87.3</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">116,213</td>
+                        <td class="country">China</td>
+                        <td>1998</td>
+                        <td>456.2</td>
+                    </tr>
+                    <tr data-company-id="13">
+                        <td class="rank">13</td>
+                        <td class="company-name">Johnson & Johnson</td>
+                        <td class="revenue">94.9</td>
+                        <td class="industry">Healthcare</td>
+                        <td class="employees">152,700</td>
+                        <td class="country">United States</td>
+                        <td>1886</td>
+                        <td>387.9</td>
+                    </tr>
+                    <tr data-company-id="14">
+                        <td class="rank">14</td>
+                        <td class="company-name">JPMorgan Chase</td>
+                        <td class="revenue">158.1</td>
+                        <td class="industry">Banking</td>
+                        <td class="employees">295,071</td>
+                        <td class="country">United States</td>
+                        <td>1799</td>
+                        <td>589.4</td>
+                    </tr>
+                    <tr data-company-id="15">
+                        <td class="rank">15</td>
+                        <td class="company-name">Visa</td>
+                        <td class="revenue">32.7</td>
+                        <td class="industry">Financial Services</td>
+                        <td class="employees">26,500</td>
+                        <td class="country">United States</td>
+                        <td>1958</td>
+                        <td>587.2</td>
+                    </tr>
+                    <tr data-company-id="16">
+                        <td class="rank">16</td>
+                        <td class="company-name">Procter & Gamble</td>
+                        <td class="revenue">82.0</td>
+                        <td class="industry">Consumer Goods</td>
+                        <td class="employees">106,000</td>
+                        <td class="country">United States</td>
+                        <td>1837</td>
+                        <td>389.7</td>
+                    </tr>
+                    <tr data-company-id="17">
+                        <td class="rank">17</td>
+                        <td class="company-name">Mastercard</td>
+                        <td class="revenue">25.1</td>
+                        <td class="industry">Financial Services</td>
+                        <td class="employees">33,400</td>
+                        <td class="country">United States</td>
+                        <td>1966</td>
+                        <td>423.8</td>
+                    </tr>
+                    <tr data-company-id="18">
+                        <td class="rank">18</td>
+                        <td class="company-name">UnitedHealth Group</td>
+                        <td class="revenue">324.2</td>
+                        <td class="industry">Healthcare</td>
+                        <td class="employees">440,000</td>
+                        <td class="country">United States</td>
+                        <td>1977</td>
+                        <td>518.9</td>
+                    </tr>
+                    <tr data-company-id="19">
+                        <td class="rank">19</td>
+                        <td class="company-name">Home Depot</td>
+                        <td class="revenue">157.4</td>
+                        <td class="industry">Retail</td>
+                        <td class="employees">475,000</td>
+                        <td class="country">United States</td>
+                        <td>1978</td>
+                        <td>413.6</td>
+                    </tr>
+                    <tr data-company-id="20">
+                        <td class="rank">20</td>
+                        <td class="company-name">ASML</td>
+                        <td class="revenue">27.6</td>
+                        <td class="industry">Semiconductors</td>
+                        <td class="employees">42,472</td>
+                        <td class="country">Netherlands</td>
+                        <td>1984</td>
+                        <td>325.4</td>
+                    </tr>
+                    <tr data-company-id="21">
+                        <td class="rank">21</td>
+                        <td class="company-name">Coca-Cola</td>
+                        <td class="revenue">46.0</td>
+                        <td class="industry">Beverages</td>
+                        <td class="employees">82,500</td>
+                        <td class="country">United States</td>
+                        <td>1886</td>
+                        <td>271.8</td>
+                    </tr>
+                    <tr data-company-id="22">
+                        <td class="rank">22</td>
+                        <td class="company-name">Netflix</td>
+                        <td class="revenue">33.7</td>
+                        <td class="industry">Entertainment</td>
+                        <td class="employees">13,000</td>
+                        <td class="country">United States</td>
+                        <td>1997</td>
+                        <td>245.7</td>
+                    </tr>
+                    <tr data-company-id="23">
+                        <td class="rank">23</td>
+                        <td class="company-name">Adobe</td>
+                        <td class="revenue">20.0</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">29,239</td>
+                        <td class="country">United States</td>
+                        <td>1982</td>
+                        <td>234.5</td>
+                    </tr>
+                    <tr data-company-id="24">
+                        <td class="rank">24</td>
+                        <td class="company-name">Oracle</td>
+                        <td class="revenue">50.0</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">164,000</td>
+                        <td class="country">United States</td>
+                        <td>1977</td>
+                        <td>389.2</td>
+                    </tr>
+                    <tr data-company-id="25">
+                        <td class="rank">25</td>
+                        <td class="company-name">Toyota</td>
+                        <td class="revenue">274.5</td>
+                        <td class="industry">Automotive</td>
+                        <td class="employees">375,235</td>
+                        <td class="country">Japan</td>
+                        <td>1937</td>
+                        <td>254.8</td>
+                    </tr>
+                    <tr data-company-id="26">
+                        <td class="rank">26</td>
+                        <td class="company-name">Samsung</td>
+                        <td class="revenue">244.2</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">267,937</td>
+                        <td class="country">South Korea</td>
+                        <td>1938</td>
+                        <td>438.7</td>
+                    </tr>
+                    <tr data-company-id="27">
+                        <td class="rank">27</td>
+                        <td class="company-name">Pfizer</td>
+                        <td class="revenue">58.5</td>
+                        <td class="industry">Healthcare</td>
+                        <td class="employees">83,000</td>
+                        <td class="country">United States</td>
+                        <td>1849</td>
+                        <td>287.3</td>
+                    </tr>
+                    <tr data-company-id="28">
+                        <td class="rank">28</td>
+                        <td class="company-name">Salesforce</td>
+                        <td class="revenue">34.9</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">79,390</td>
+                        <td class="country">United States</td>
+                        <td>1999</td>
+                        <td>267.4</td>
+                    </tr>
+                    <tr data-company-id="29">
+                        <td class="rank">29</td>
+                        <td class="company-name">McDonald's</td>
+                        <td class="revenue">23.2</td>
+                        <td class="industry">Food Service</td>
+                        <td class="employees">200,000</td>
+                        <td class="country">United States</td>
+                        <td>1940</td>
+                        <td>213.8</td>
+                    </tr>
+                    <tr data-company-id="30">
+                        <td class="rank">30</td>
+                        <td class="company-name">Intel</td>
+                        <td class="revenue">79.0</td>
+                        <td class="industry">Semiconductors</td>
+                        <td class="employees">131,900</td>
+                        <td class="country">United States</td>
+                        <td>1968</td>
+                        <td>195.2</td>
+                    </tr>
+                    <tr data-company-id="31">
+                        <td class="rank">31</td>
+                        <td class="company-name">IBM</td>
+                        <td class="revenue">60.5</td>
+                        <td class="industry">Technology</td>
+                        <td class="employees">282,100</td>
+                        <td class="country">United States</td>
+                        <td>1911</td>
+                        <td>178.4</td>
+                    </tr>
+                    <tr data-company-id="32">
+                        <td class="rank">32</td>
+                        <td class="company-name">Disney</td>
+                        <td class="revenue">82.7</td>
+                        <td class="industry">Entertainment</td>
+                        <td class="employees">223,000</td>
+                        <td class="country">United States</td>
+                        <td>1923</td>
+                        <td>203.5</td>
+                    </tr>
+                    <tr data-company-id="33">
+                        <td class="rank">33</td>
+                        <td class="company-name">Nike</td>
+                        <td class="revenue">51.2</td>
+                        <td class="industry">Apparel</td>
+                        <td class="employees">83,700</td>
+                        <td class="country">United States</td>
+                        <td>1964</td>
+                        <td>189.3</td>
+                    </tr>
+                    <tr data-company-id="34">
+                        <td class="rank">34</td>
+                        <td class="company-name">Shopify</td>
+                        <td class="revenue">7.1</td>
+                        <td class="industry">E-commerce</td>
+                        <td class="employees">11,600</td>
+                        <td class="country">Canada</td>
+                        <td>2006</td>
+                        <td>98.4</td>
+                    </tr>
+                    <tr data-company-id="35">
+                        <td class="rank">35</td>
+                        <td class="company-name">MongoDB</td>
+                        <td class="revenue">1.3</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">4,846</td>
+                        <td class="country">United States</td>
+                        <td>2007</td>
+                        <td>28.7</td>
+                    </tr>
+                    <tr data-company-id="36">
+                        <td class="rank">36</td>
+                        <td class="company-name">Zoom</td>
+                        <td class="revenue">4.4</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">8,322</td>
+                        <td class="country">United States</td>
+                        <td>2011</td>
+                        <td>19.8</td>
+                    </tr>
+                    <tr data-company-id="37">
+                        <td class="rank">37</td>
+                        <td class="company-name">Spotify</td>
+                        <td class="revenue">13.2</td>
+                        <td class="industry">Entertainment</td>
+                        <td class="employees">9,808</td>
+                        <td class="country">Sweden</td>
+                        <td>2006</td>
+                        <td>26.5</td>
+                    </tr>
+                    <tr data-company-id="38">
+                        <td class="rank">38</td>
+                        <td class="company-name">Airbnb</td>
+                        <td class="revenue">9.9</td>
+                        <td class="industry">Travel</td>
+                        <td class="employees">6,407</td>
+                        <td class="country">United States</td>
+                        <td>2008</td>
+                        <td>78.9</td>
+                    </tr>
+                    <tr data-company-id="39">
+                        <td class="rank">39</td>
+                        <td class="company-name">Uber</td>
+                        <td class="revenue">37.3</td>
+                        <td class="industry">Transportation</td>
+                        <td class="employees">32,800</td>
+                        <td class="country">United States</td>
+                        <td>2009</td>
+                        <td>154.2</td>
+                    </tr>
+                    <tr data-company-id="40">
+                        <td class="rank">40</td>
+                        <td class="company-name">PayPal</td>
+                        <td class="revenue">29.8</td>
+                        <td class="industry">Financial Services</td>
+                        <td class="employees">30,900</td>
+                        <td class="country">United States</td>
+                        <td>1998</td>
+                        <td>78.4</td>
+                    </tr>
+                    <tr data-company-id="41">
+                        <td class="rank">41</td>
+                        <td class="company-name">Square (Block)</td>
+                        <td class="revenue">21.9</td>
+                        <td class="industry">Financial Services</td>
+                        <td class="employees">13,093</td>
+                        <td class="country">United States</td>
+                        <td>2009</td>
+                        <td>44.7</td>
+                    </tr>
+                    <tr data-company-id="42">
+                        <td class="rank">42</td>
+                        <td class="company-name">Twitter (X)</td>
+                        <td class="revenue">5.1</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">7,500</td>
+                        <td class="country">United States</td>
+                        <td>2006</td>
+                        <td>44.0</td>
+                    </tr>
+                    <tr data-company-id="43">
+                        <td class="rank">43</td>
+                        <td class="company-name">Snapchat</td>
+                        <td class="revenue">4.6</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">5,661</td>
+                        <td class="country">United States</td>
+                        <td>2011</td>
+                        <td>18.2</td>
+                    </tr>
+                    <tr data-company-id="44">
+                        <td class="rank">44</td>
+                        <td class="company-name">Pinterest</td>
+                        <td class="revenue">3.0</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">4,284</td>
+                        <td class="country">United States</td>
+                        <td>2010</td>
+                        <td>19.7</td>
+                    </tr>
+                    <tr data-company-id="45">
+                        <td class="rank">45</td>
+                        <td class="company-name">Dropbox</td>
+                        <td class="revenue">2.5</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">2,967</td>
+                        <td class="country">United States</td>
+                        <td>2007</td>
+                        <td>8.9</td>
+                    </tr>
+                    <tr data-company-id="46">
+                        <td class="rank">46</td>
+                        <td class="company-name">Slack</td>
+                        <td class="revenue">1.8</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">2,545</td>
+                        <td class="country">United States</td>
+                        <td>2009</td>
+                        <td>27.7</td>
+                    </tr>
+                    <tr data-company-id="47">
+                        <td class="rank">47</td>
+                        <td class="company-name">Reddit</td>
+                        <td class="revenue">0.8</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">2,013</td>
+                        <td class="country">United States</td>
+                        <td>2005</td>
+                        <td>9.5</td>
+                    </tr>
+                    <tr data-company-id="48">
+                        <td class="rank">48</td>
+                        <td class="company-name">Discord</td>
+                        <td class="revenue">0.5</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">1,000</td>
+                        <td class="country">United States</td>
+                        <td>2012</td>
+                        <td>15.0</td>
+                    </tr>
+                    <tr data-company-id="49">
+                        <td class="rank">49</td>
+                        <td class="company-name">TikTok (ByteDance)</td>
+                        <td class="revenue">58.0</td>
+                        <td class="industry">Social Media</td>
+                        <td class="employees">110,000</td>
+                        <td class="country">China</td>
+                        <td>2012</td>
+                        <td>268.0</td>
+                    </tr>
+                    <tr data-company-id="50">
+                        <td class="rank">50</td>
+                        <td class="company-name">Canva</td>
+                        <td class="revenue">1.7</td>
+                        <td class="industry">Software</td>
+                        <td class="employees">4,000</td>
+                        <td class="country">Australia</td>
+                        <td>2012</td>
+                        <td>40.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Global Companies Database. Data compiled for educational and research purposes.</p>
+            <p>Last updated: September 2024 | Source: Various financial reports and market data</p>
+        </div>
+    </div>
+</body>
+</html>
