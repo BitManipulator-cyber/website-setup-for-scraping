@@ -11,6 +11,10 @@ app.get("/" , (req , res)=>{
     res.render("index.ejs");
 })
 
+app.get("/flight" , (req , res)=>{
+    res.render("flight.ejs")
+})
+
 app.listen(PORT , ()=>{
     console.log("App is listening...");
 })
